@@ -1,0 +1,157 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* Links / buttons */
+.footer .icon-link {
+  font-size: 25px;
+  color: #000;
+}
+.link-block a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.author-block {
+  display: inline-block;
+}
+
+/* Title/authors font */
+.publication-title,
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+}
+.publication-authors a {
+  color: #fc819e !important;
+  text-decoration: none;
+}
+.publication-authors a:hover {
+  color: #fc819e;
+  text-decoration: underline;
+}
+
+/* Layout tuning */
+.container.is-max-desktop {
+  max-width: 1200px; /* keep text readable */
+}
+
+.section-tight {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+/* Section alternating background for readability */
+.section-alt {
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+/* Tagline under buttons */
+.tagline {
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* Figures */
+.figure-wide {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+figure.image img {
+  width: 100%;
+  height: auto;
+}
+
+.figure-caption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Notes box */
+.note-box {
+  background: #f5f7ff;
+  border: 1px solid #e3e7ff;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+}
+
+/* Thin HR used inside method section */
+.thin-hr {
+  border: none;
+  border-top: 1px solid #e6e6e6;
+  margin: 1.25rem 0;
+}
+
+/* Tables: make responsive */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 10px;
+}
+
+.table {
+  min-width: 720px; /* prevents squished columns on desktop; scrolls on mobile */
+}
+
+pre code {
+  border-radius: 10px;
+}
+
+/* Keep your existing unused legacy styles (safe to keep, but not required) */
+.dnerf { font-variant: small-caps; }
+
+.results-carousel { overflow: hidden; }
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+.results-carousel video { margin: 0; }
+
+
+/* Only a couple of sentences are highlighted via .hl-core.
+   Keep this subtle so the page doesn't look CORE-only. */
+.hl-core {
+  background: #fff7f0;
+  border-radius: 6px;
+  padding: 0.08rem 0.25rem;
+}
+
+/* Keep the existing note-box style; just add a slightly warmer CORE variant */
+.note-core {
+  background: #fff7f0;
+  border: 1px solid #ffe1cc;
+}
+
+/* Optional: keep teaser height reasonable (works for gif too) */
+.teaser-hero img.figure-wide {
+  max-height: 560px;
+  object-fit: contain;
+}
+
+/* Only shrink Fig.4 */
+.fig4-small img {
+  max-width: 720px; 
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.conference-name {
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000; 
+  text-align: center;
+}
