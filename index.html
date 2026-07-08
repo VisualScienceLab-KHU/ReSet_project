@@ -111,7 +111,7 @@
 
           <!-- Balanced tagline (MoTAR + CORE), with CORE weight in wording (no highlight here) -->
           <p class="tagline">
-            ReSet resolves <b>class confusion and imprecise localization</b> in prototype-based few-shot object detection
+            ReSet resolves <b>class confusion</b> and <b>imprecise localization</b> in prototype-based few-shot object detection
             by constructing text-anchored semantic prototypes and refining boxes with stage-aligned hierarchical ViT features.
           </p>
 
@@ -172,16 +172,16 @@
         <div class="content">
           <ol>
             <li>
-              We identify <b>Inter-Category Entanglement (ICE)</b> as a fundamental bottleneck of unified 3D anomaly detection and reformulate unified 3D-AD as semantically conditioned reconstruction.
+              We identify two fundamental bottlenecks of prototype-based similarity learning in few-shot object detection: <b>inter-class similarity margin collapse</b> causing class confusion, and <b>insufficient visual cues</b> for precise localization.
             </li>
             <li>
-              We propose <b>Coarse-to-Fine Global Tokenization (CFGT)</b>, which aggregates multi-resolution geometric cues into a category-aware global representation for reliable semantic identity formation.
+              We propose <b>Text-Anchored Semantic Mask (TSMa)</b>, which leverages text features as semantic anchors to identify semantically co-activated channels, suppress style-induced spurious responses, and construct class-discriminative Semantic Prototypes.
             </li>
             <li>
-              We introduce <b>Category-Conditioned Contrastive Learning (C3L)</b> and a <b>Geometry-Guided Decoder (GGD)</b> to disentangle category semantics and reconstruct features with both semantic and geometric consistency.
+              We introduce <b>Stage-Aligned Hierarchical Autoregressive Regression (SHARe)</b>, which reformulates localization as progressive box refinement by injecting hierarchical ViT features in a stage-aligned manner, from high-level semantic cues to low-level spatial details.
             </li>
             <li>
-              Extensive experiments on Real3D-AD and Anomaly-ShapeNet demonstrate strong gains over prior methods and validate the effectiveness of semantically disentangled reconstruction in unified 3D anomaly detection.
+              Extensive experiments on COCO and Pascal VOC demonstrate state-of-the-art performance across one-shot and 10/30-shot settings, validating the effectiveness of text-anchored semantic prototypes and hierarchical autoregressive localization for prototype-based FSOD.
             </li>
           </ol>
         </div>
