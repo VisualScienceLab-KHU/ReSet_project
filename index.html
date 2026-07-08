@@ -197,16 +197,16 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Why Semantically Disentangled Unified 3D-AD?</h2>
+        <h2 class="title is-3">Why Rethinking Prototype-based Similarity Learning for FSOD?</h2>
 
         <div class="content has-text-justified">
           <p>
-            Prior 3D anomaly detection methods are largely category-specific, requiring a separate model for each object class. Although recent unified methods improve scalability by training a single model across multiple categories, they often fail to preserve semantic identity in the latent space. As a result, the model may reconstruct an object under the wrong category prior, even when the input is normal. SeDiR addresses this limitation by explicitly disentangling category-level semantics before reconstruction and by conditioning reconstruction on both semantic and geometric priors.
+            Prior few-shot object detection methods often require fine-tuning on scarce novel-class examples, which can lead to instability and overfitting. Recent prototype-based similarity learning methods avoid fine-tuning by matching query features with support-derived prototypes, but visual-only prototypes often produce collapsed inter-class similarity margins and class-confused predictions. In addition, similarity scores mainly capture semantic affinity and provide insufficient spatial cues for accurate localization. ReSet addresses these two bottlenecks by constructing text-anchored Semantic Prototypes for class separation and injecting hierarchical ViT features for precise box refinement.
           </p>
 
           <!-- (1/2) only: highlight a single key sentence about CORE -->
           <p class="note-box note-core">
-            <span class="hl-core"><b>Key point:</b> the central issue is not simply reconstructing anomalies, but reconstructing before <b>understanding what is being reconstructed</b>. SeDiR resolves this by establishing semantic identity first and reconstructing second.</span>
+            <span class="hl-core"><b>Key point:</b> the central issue is not prototype-based similarity itself, but <b>relying on visual-only similarity for both classification and localization</b>. ReSet makes similarity more class-discriminative with text-anchored Semantic Prototypes, and complements similarity-only localization with hierarchical ViT visual cues for progressive box refinement.</span>
           </p>
         </div>
       </div>
