@@ -201,7 +201,7 @@
 
         <div class="content has-text-justified">
           <p>
-            Prior few-shot object detection methods often require fine-tuning on scarce novel-class examples, which can lead to instability and overfitting. Recent prototype-based similarity learning methods avoid fine-tuning by matching query features with support-derived prototypes, but visual-only prototypes often produce collapsed inter-class similarity margins and class-confused predictions. In addition, similarity scores mainly capture semantic affinity and provide insufficient spatial cues for accurate localization. ReSet addresses these two bottlenecks by constructing text-anchored Semantic Prototypes for class separation and injecting hierarchical ViT features for precise box refinement.
+            Prior few-shot object detection methods often require fine-tuning on scarce novel-class examples, which can lead to instability and overfitting. Prototype-based similarity learning avoids this by using query–prototype similarity for training-free novel-class detection, but it over-relies on visual-only similarity for both classification and localization. Visual-only prototypes can contain style-related or instance-specific cues shared across categories, narrowing inter-class similarity margins and causing class confusion. Moreover, similarity scores mainly capture semantic affinity, not the spatial evidence needed to localize object boundaries, shapes, and scales. ReSet rethinks this paradigm by constructing text-anchored Semantic Prototypes to make similarity more class-discriminative, and by injecting hierarchical ViT features to recover spatial cues for precise box refinement.
           </p>
 
           <!-- (1/2) only: highlight a single key sentence about CORE -->
@@ -217,27 +217,33 @@
 <!-- =========================
      MOTIVATION / PARADIGM FIGURE (PDF Fig.1)
      ========================= -->
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Why Unified 3D-AD Fails: Inter-Category Entanglement</h2>
+        <h2 class="title is-3">Why Prototype-based Similarity Needs Semantic and Spatial Evidence</h2>
 
         <div class="content has-text-justified">
           <p>
-            We analyze the latent space of a unified baseline and observe that semantically different categories form heavily overlapping feature clusters rather than distinct semantic manifolds. In particular, categories such as chicken, duck, and gemstone exhibit clear entanglement in the latent space. Furthermore, normal samples with lower category classification scores tend to show higher reconstruction errors, indicating that incorrect semantic understanding leads directly to incorrect reconstruction. These observations confirm that ICE is not a random side effect, but a systematic bottleneck in unified 3D anomaly detection.
+            We analyze prototype-based similarity learning and observe that visual-only prototypes fail to form sufficiently separated class evidence. Competing categories often obtain comparable similarity scores, leading to a collapsed margin between the target class and visually similar classes. As a result, the detector may assign incorrect class labels even when the object region is well captured. We further observe that similarity-based localization lacks the spatial evidence needed to resolve object boundaries, since similarity scores mainly encode semantic affinity rather than shape, scale, or boundary cues. These observations confirm that the failure of prototype-based FSOD is not a random side effect, but a systematic bottleneck caused by relying on visual-only similarity for both classification and localization.
           </p>
 
         <figure class="image">
           <img class="figure-wide" src="./static/images/figure2.png" alt="WVAD paradigms comparison">
         </figure>
         <p class="figure-caption">
-          T-SNE visualization and quantitative analysis of semantic disentanglement. Compared with MC3D-AD, SeDiR forms better-separated category-aware manifolds, improves category classification confidence, and reduces normal reconstruction error.
+          Comparison of average query–prototype similarity scores. ReSet produces a larger gap between the top-ranked prototype and competing class prototypes, indicating improved inter-class separability and reduced class confusion.
+        </p>
+        <figure class="image">
+          <img class="figure-wide" src="./static/images/figure2_1.png" alt="WVAD paradigms comparison">
+        </figure>
+        <p class="figure-caption">
+          Layer-wise visualization of ViT features. ViT representations provide complementary cues across depth, where deeper layers capture semantic context and shallower layers preserve spatial details, motivating hierarchical feature injection for precise localization.
         </p>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- =========================
