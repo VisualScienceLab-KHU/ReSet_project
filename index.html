@@ -252,7 +252,7 @@
 
         <div class="content has-text-justified">
           <p>
-            SeDiR follows a simple principle: <b>understand what to reconstruct</b> before deciding how to reconstruct. Given an input point cloud, SeDiR first extracts multi-resolution geometric features and aggregates them into a category-aware global token. It then disentangles category semantics in the latent space and reconstructs features using both semantic priors and geometry-guided cues. This design enables semantically aligned and geometrically consistent reconstruction in the unified multi-category setting.
+            ReSet follows a simple principle: <b>build class-discriminative evidence for what to detect</b> and <b>progressively recover spatial evidence for where to localize</b>. Given a few support examples, ReSet first constructs visual prototypes and refines them into Semantic Prototypes by using text features as semantic anchors. This suppresses style-induced, class-agnostic channels and enlarges inter-class similarity margins for more reliable class separation. For localization, ReSet progressively refines object boxes by injecting hierarchical ViT features, using high-level semantic cues for coarse localization and low-level spatial cues for precise boundary refinement. This design enables both robust classification and accurate localization in prototype-based few-shot object detection.
           </p>
         </div>
 
@@ -261,7 +261,7 @@
           <img class="figure-wide" src="./static/images/figure3.png" alt="Overall architecture of SeDiR">
         </figure>
         <p class="figure-caption">
-          Overall architecture of SeDiR. Our framework consists of two stages: Semantically Disentangled Representation Learning and Semantically Disentangled Reconstruction. CFGT forms a category-aware global token from multi-resolution geometric features, C3L disentangles latent semantics, and GGD reconstructs the object conditioned on both semantic and geometric priors.
+          Overall architecture of ReSet. Our framework consists of two main components: Text-Anchored Semantic Mask (TSMa) and Stage-Aligned Hierarchical Autoregressive Regression (SHARe). TSMa constructs Semantic Prototypes by identifying channels co-activated by visual and text features, thereby mitigating inter-class similarity margin collapse and class confusion. SHARe reformulates localization as a hierarchical autoregressive refinement process, injecting multi-level ViT features in a stage-aligned manner to compensate for the limited spatial cues of similarity scores.
         </p>
 
         <hr class="thin-hr">
