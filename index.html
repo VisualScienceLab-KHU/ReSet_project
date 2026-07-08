@@ -203,17 +203,22 @@
           <p>
             Prior few-shot object detection methods often require fine-tuning on scarce novel-class examples, which can lead to instability and overfitting. Prototype-based similarity learning avoids this by using query–prototype similarity for training-free novel-class detection, but it over-relies on visual-only similarity for both classification and localization. Visual-only prototypes can contain style-related or instance-specific cues shared across categories, narrowing inter-class similarity margins and causing class confusion. Moreover, similarity scores mainly capture semantic affinity, not the spatial evidence needed to localize object boundaries, shapes, and scales. ReSet rethinks this paradigm by constructing text-anchored Semantic Prototypes to make similarity more class-discriminative, and by injecting hierarchical ViT features to recover spatial cues for precise box refinement.
           </p>
+          <p>
+            The analysis below illustrates these two bottlenecks. Visual-only similarity produces small gaps between the top-ranked class and competing classes, whereas ReSet enlarges the margin by suppressing ambiguous prototype responses. In addition, layer-wise ViT visualizations show that localization-relevant cues are distributed across depth: deeper layers capture semantic context, while shallower layers preserve spatial details such as edges and textures.
+          </p>
 
           <figure class="image">
             <img class="figure-wide" src="./static/images/figure2.png" alt="WVAD paradigms comparison">
           </figure>
+          <p class="figure-caption">
+            Comparison of average query–prototype similarity scores. ReSet produces a larger gap between the top-ranked prototype and competing class prototypes, indicating improved inter-class separability and reduced class confusion.
+          </p>
           
           <figure class="image">
             <img class="figure-wide" src="./static/images/figure2_1.png" alt="WVAD paradigms comparison">
           </figure>
-
-          <p>
-            The analysis below illustrates these two bottlenecks. Visual-only similarity produces small gaps between the top-ranked class and competing classes, whereas ReSet enlarges the margin by suppressing ambiguous prototype responses. In addition, layer-wise ViT visualizations show that localization-relevant cues are distributed across depth: deeper layers capture semantic context, while shallower layers preserve spatial details such as edges and textures.
+          <p class="figure-caption">
+            Layer-wise ViT visualizations showing the distribution of localization-relevant cues across different network depths.
           </p>
 
           <!-- (1/2) only: highlight a single key sentence about CORE -->
