@@ -21,11 +21,11 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 .publication-authors a {
-  color: #fc819e !important;
+  color: #81fc9c !important;
   text-decoration: none;
 }
 .publication-authors a:hover {
-  color: #fc819e;
+  color: #81fc9c;
   text-decoration: underline;
 }
 
