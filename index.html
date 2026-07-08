@@ -111,8 +111,8 @@
 
           <!-- Balanced tagline (MoTAR + CORE), with CORE weight in wording (no highlight here) -->
           <p class="tagline">
-            SeDiR resolves <b>Inter-Category Entanglement</b> in unified 3D anomaly detection<br>
-            by learning category-aware semantics before reconstruction and guiding reconstruction with geometric evidence.
+            ReSet resolves <b>class confusion and imprecise localization</b> in prototype-based few-shot object detection
+            by constructing text-anchored semantic prototypes and refining boxes with stage-aligned hierarchical ViT features.
           </p>
 
         </div>
@@ -134,7 +134,7 @@
           <img class="figure-wide" src="./static/images/figure1.png" alt="SeDiR teaser">
         </figure>
         <p class="figure-caption">
-          Teaser: an overview of <b>SeDiR</b>. Category-specific models require a separate model for each class, while naive unified models often suffer from inter-category feature entanglement. SeDiR addresses this problem by aggregating coarse-to-fine geometric cues into category-aware global features, disentangling them via Category-Conditioned Contrastive Learning, and guiding reconstruction with input geometry.
+          Teaser: an overview of <b>ReSet</b>. Recent prototype-based similarity learning methods construct class prototypes solely from visual support features, often suffering from inter-class similarity margin collapse and insufficient visual cues for localization. ReSet addresses these problems by leveraging text features as semantic anchors to retain only co-activated semantic channels, enlarging inter-class similarity margins for better class separation, and injecting hierarchical ViT features into autoregressive regression stages for precise localization.
         </p>
       </div>
     </div>
