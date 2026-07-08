@@ -299,7 +299,7 @@
 
         <div class="content has-text-justified">
           <p>
-            SeDiR produces more semantically consistent and spatially precise anomaly localization across diverse categories. Compared with a previous unified model (MC3D-AD), it better highlights true anomalous regions while reducing false responses on normal surfaces. These qualitative results support the claim that disentangling semantic identity before reconstruction leads to more reliable anomaly detection and localization.
+            ReSet produces more reliable classification and precise localization across diverse few-shot detection scenarios. Compared with DE-ViT and PiDiViT, it corrects class-confused predictions and yields cleaner bounding boxes with fewer redundant detections. These qualitative results support the claim that TSMa mitigates inter-class similarity margin collapse, while SHARe compensates for insufficient visual cues through hierarchical ViT feature injection.
           </p>
         </div>
 
@@ -310,7 +310,7 @@
           <img class="figure-wide" src="./static/images/figure6.png" alt="Qualitative Results_AS">
         </figure>
         <p class="figure-caption">
-          Qualitative comparison between MC3D-AD and SeDiR. SeDiR provides more accurate and complete localization by reconstructing features under the correct semantic prior.
+          Qualitative comparison between DE-ViT, PiDiViT, and ReSet. ReSet provides more accurate classification and precise localization by constructing text-anchored Semantic Prototypes and progressively refining boxes with hierarchical ViT features.
         </p>
 
       </div>
@@ -328,10 +328,10 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3 has-text-centered">Citation</h2>
         <div class="content">
-<pre><code>@article{kim2026semantically,
-  title={A Semantically Disentangled Unified Model for Multi-category 3D Anomaly Detection},
-  author={Kim, SuYeon and Lee, Wongyu and Cho, MyeongAh},
-  journal={arXiv preprint arXiv:2603.25159},
+<pre><code>@article{heo2026rethinking,
+  title={Rethinking Prototype-based Similarity Learning for Few-Shot Object Detection},
+  author={Heo, KunHo and Lee, Wongyu and Kim, SuYeon and Cho, MyeongAh and others},
+  journal={arXiv preprint arXiv:2606.23069},
   year={2026}
 }</code></pre>
         </div>
@@ -344,7 +344,7 @@
 <footer class="footer">
   <div class="content has-text-centered">
     <p class="is-size-7">
-      © 2026 SeDiR Project Page.
+      © 2026 ReSet Project Page.
     </p>
   </div>
 </footer>
