@@ -204,9 +204,21 @@
             Prior few-shot object detection methods often require fine-tuning on scarce novel-class examples, which can lead to instability and overfitting. Prototype-based similarity learning avoids this by using query–prototype similarity for training-free novel-class detection, but it over-relies on visual-only similarity for both classification and localization. Visual-only prototypes can contain style-related or instance-specific cues shared across categories, narrowing inter-class similarity margins and causing class confusion. Moreover, similarity scores mainly capture semantic affinity, not the spatial evidence needed to localize object boundaries, shapes, and scales. ReSet rethinks this paradigm by constructing text-anchored Semantic Prototypes to make similarity more class-discriminative, and by injecting hierarchical ViT features to recover spatial cues for precise box refinement.
           </p>
 
+          <figure class="image">
+            <img class="figure-wide" src="./static/images/figure2.png" alt="WVAD paradigms comparison">
+          </figure>
+          
+          <figure class="image">
+            <img class="figure-wide" src="./static/images/figure2_1.png" alt="WVAD paradigms comparison">
+          </figure>
+
+          <p>
+            The analysis below illustrates these two bottlenecks. Visual-only similarity produces small gaps between the top-ranked class and competing classes, whereas ReSet enlarges the margin by suppressing ambiguous prototype responses. In addition, layer-wise ViT visualizations show that localization-relevant cues are distributed across depth: deeper layers capture semantic context, while shallower layers preserve spatial details such as edges and textures.
+          </p>
+
           <!-- (1/2) only: highlight a single key sentence about CORE -->
           <p class="note-box note-core">
-            <span class="hl-core"><b>Key point:</b> the central issue is not prototype-based similarity itself, but <b>relying on visual-only similarity for both classification and localization</b>. ReSet makes similarity more class-discriminative with text-anchored Semantic Prototypes, and complements similarity-only localization with hierarchical ViT visual cues for progressive box refinement.</span>
+            <span class="hl-core"><b>Key point:</b> the central issue is not prototype-based similarity itself, but relying on visual-only similarity for both classification and localization. ReSet makes similarity more class-discriminative with text-anchored Semantic Prototypes, and complements similarity-only localization with hierarchical ViT visual cues for progressive box refinement.</span>
           </p>
         </div>
       </div>
