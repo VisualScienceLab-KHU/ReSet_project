@@ -4,7 +4,7 @@
   </a>
 </p>
 
-## 🏃‍♂️ SeDiR Project Page
+## 🏃‍♂️ ReSet Project Page
 This repository contains the project page for **"Rethinking Prototype-based Similarity
 Learning for Few-Shot Object Detection"**.
 
