@@ -312,6 +312,37 @@
 
 
 <!-- =========================
+     QUANTITATIVE (Fig.5)
+     ========================= -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            ReSet achieves state-of-the-art few-shot detection performance across COCO and Pascal VOC. Compared with DE-ViT and PiDiViT, ReSet consistently improves novel-class AP in both 10-shot and 30-shot COCO settings, including large gains in high-IoU nAP75. On Pascal VOC, ReSet reaches the best overall Avg nAP50 of 68.1 across three novel splits and multiple shot settings. These quantitative results demonstrate that making similarity more class-discriminative and complementing it with hierarchical ViT visual cues leads to stronger recognition and more precise localization.
+          </p>
+        </div>
+
+        <figure class="image">
+          <img class="figure-wide" src="./static/images/figure7.png" alt="Qualitative Results_real3d">
+        </figure>
+        <figure class="image">
+          <img class="figure-wide" src="./static/images/figure8.png" alt="Qualitative Results_AS">
+        </figure>
+        <p class="figure-caption">
+          Quantitative comparison on COCO and Pascal VOC few-shot object detection benchmarks. ReSet achieves state-of-the-art performance across diverse shot settings by constructing text-anchored Semantic Prototypes for class-discriminative similarity and refining boxes with hierarchical ViT visual cues.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
      QUALITATIVE (Fig.5)
      ========================= -->
 <section class="section">
