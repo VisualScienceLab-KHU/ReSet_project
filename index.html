@@ -197,7 +197,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Why Rethinking Prototype-based Similarity Learning for FSOD?</h2>
+        <h2 class="title is-3">Why Should We Rethink Prototype-based Similarity Learning?</h2>
 
         <div class="content has-text-justified">
           <p>
@@ -283,7 +283,7 @@
           <img class="figure-wide" src="./static/images/figure3.png" alt="Overall architecture of SeDiR">
         </figure>
         <p class="figure-caption">
-          Overall architecture of ReSet. Our framework consists of two main components: Text-Anchored Semantic Mask (TSMa) and Stage-Aligned Hierarchical Autoregressive Regression (SHARe). TSMa constructs Semantic Prototypes by identifying channels co-activated by visual and text features, thereby mitigating inter-class similarity margin collapse and class confusion. SHARe reformulates localization as a hierarchical autoregressive refinement process, injecting multi-level ViT features in a stage-aligned manner to compensate for the limited spatial cues of similarity scores.
+          Overall architecture of ReSet. Our framework consists of two main components: <b>Text-Anchored Semantic Mask (TSMa)</b> and <b>Stage-Aligned Hierarchical Autoregressive Regression (SHARe)</b>. TSMa constructs Semantic Prototypes by identifying channels co-activated by visual and text features, thereby mitigating inter-class similarity margin collapse and class confusion. SHARe reformulates localization as a hierarchical autoregressive refinement process, injecting multi-level ViT features in a stage-aligned manner to compensate for the limited spatial cues of similarity scores.
         </p>
 
         <!-- <hr class="thin-hr">
@@ -322,7 +322,7 @@
 
         <div class="content has-text-justified">
           <p>
-            ReSet achieves state-of-the-art few-shot detection performance on COCO and Pascal VOC. Compared with prior prototype-based similarity learning methods, ReSet consistently improves novel-class AP (nAP) in both 10-shot and 30-shot COCO settings. On Pascal VOC, ReSet achieves the best overall Avg. nAP50 across three novel splits and multiple shot settings. These quantitative results demonstrate that ReSet improves classification reliability by mitigating inter-class similarity margin collapse, while enabling more precise box localization by injecting hierarchical ViT features to recover spatial cues.
+            ReSet achieves state-of-the-art few-shot detection performance on COCO and Pascal VOC. Compared with prior prototype-based similarity learning methods, ReSet consistently improves novel-class AP (nAP) in both 10-shot and 30-shot COCO settings. On Pascal VOC, ReSet achieves the best overall average nAP50 across three novel splits and multiple shot settings. These quantitative results demonstrate that ReSet improves classification reliability by mitigating inter-class similarity margin collapse, while enabling more precise box localization by injecting hierarchical ViT features to recover spatial cues.
           </p>
         </div>
 
@@ -333,7 +333,7 @@
           <img class="figure-wide" src="./static/images/figure8.png" alt="Qualitative Results_AS">
         </figure>
         <p class="figure-caption">
-          Quantitative comparison on COCO and Pascal VOC few-shot object detection benchmarks. Ours (ReSet) achieves state-of-the-art performance across diverse shot settings by constructing text-anchored Semantic Prototypes for class-discriminative similarity and refining boxes with hierarchical ViT visual cues.
+          Quantitative comparison on COCO (top) and Pascal VOC (bottom) few-shot object detection benchmarks. Ours (ReSet) achieves state-of-the-art performance across diverse shot settings.
         </p>
 
       </div>
@@ -364,7 +364,7 @@
           <img class="figure-wide" src="./static/images/figure6_1.png" alt="Qualitative Results_AS">
         </figure>
         <p class="figure-caption">
-          Qualitative comparison between DE-ViT, PiDiViT, and Ours (ReSet). ReSet provides more accurate classification and precise localization by constructing text-anchored Semantic Prototypes and progressively refining boxes with hierarchical ViT features.
+          Qualitative comparison between DE-ViT, PiDiViT, and Ours (ReSet). ReSet provides more accurate classification and precise localization.
         </p>
 
       </div>
